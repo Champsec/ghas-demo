@@ -43,8 +43,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Secret Scan
-        uses: max/secret-scan@1.0.0
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Upgrade pip
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Install GitPython
+        run: |
+          pip install GitPython==3.1.30
+
+      - name: Run Secret Scan
+        uses: max/secret-scan@1.0.0
         
       - name: Fetch Secret Scanning Alerts
         run: |
