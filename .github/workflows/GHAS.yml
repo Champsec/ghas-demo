@@ -47,6 +47,8 @@ jobs:
         uses: trufflesecurity/trufflehog@v3.88.24
       - name: Secret scanning
         uses: advanced-security/secret-scanning-review-action@v2.1.0
+        with:
+          Token: secrets.MY_GITHUB_TOKEN
         
       - name: Fetch Secret Scanning Alerts
         run: |
