@@ -43,7 +43,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Secret scan
-        uses: max/secret-scan@master
+        uses: max/secret-scan@1.0.0
           
         
       - name: Fetch Secret Scanning Alerts
