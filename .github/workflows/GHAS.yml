@@ -46,9 +46,10 @@ jobs:
       - name: Secret Scan
         uses: trufflesecurity/trufflehog@v3.88.24
       - name: Secret scanning
-        uses: advanced-security/secret-scanning-review-action@v2.1.0
+        uses: Yash-srivastav16/github-secrets-scanner-action@v1
         with:
-          Token: secrets.MY_GITHUB_TOKEN
+          repo: Champsec/ghas-demo
+          token: secrets.MY_GITHUB_TOKEN
         
       - name: Fetch Secret Scanning Alerts
         run: |
