@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Secret Scan
-        uses: trufflesecurity/trufflehog@v3
+        uses: trufflesecurity/trufflehog@v3.88.24
         
       - name: Fetch Secret Scanning Alerts
         run: |
