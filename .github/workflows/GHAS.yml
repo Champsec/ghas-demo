@@ -42,9 +42,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Secret scan
+
+      - name: Secret Scan
         uses: max/secret-scan@1.0.0
-          
         
       - name: Fetch Secret Scanning Alerts
         run: |
