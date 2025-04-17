@@ -49,7 +49,7 @@ jobs:
         uses: Yash-srivastav16/github-secrets-scanner-action@v1
         with:
           repo: Champsec/ghas-demo
-          token: secrets.MY_GITHUB_TOKEN
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
         
       - name: Fetch Secret Scanning Alerts
         run: |
